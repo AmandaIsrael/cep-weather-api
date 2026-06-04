@@ -1,0 +1,15 @@
+# Environment files (contain the WeatherAPI secret) — never commit
+.env
+
+# Build artifacts
+/server
+/bin/
+
+# Test / coverage output
+*.out
+coverage.html
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
