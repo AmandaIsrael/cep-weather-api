@@ -7,12 +7,12 @@ Celsius, Fahrenheit e Kelvin.
 ## URL de produção (Cloud Run)
 
 > **TODO:** cole aqui a URL ativa após o deploy, ex.:
-> `https://cep-weather-api-xxxxxxxx-uc.a.run.app`
+> `https://cep-weather-api-939917444284.us-central1.run.app`
 
 Exemplo de requisição:
 
 ```bash
-curl https://<sua-url>.run.app/01310100
+curl https://cep-weather-api-939917444284.us-central1.run.app/01310100
 ```
 
 ## Contrato da API
