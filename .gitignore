@@ -1,5 +1,6 @@
 # Environment files (contain the WeatherAPI secret) — never commit
 .env
+.go-version
 
 # Build artifacts
 /server
