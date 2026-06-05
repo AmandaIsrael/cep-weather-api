@@ -17,6 +17,7 @@ func TestNewTemperatureShouldConvertCelsiusToAllScales(t *testing.T) {
 		{name: "freezing point", celsius: 0, fahrenheit: 32, kelvin: 273.15},
 		{name: "boiling point", celsius: 100, fahrenheit: 212, kelvin: 373.15},
 		{name: "negative value", celsius: -10, fahrenheit: 14, kelvin: 263.15},
+		{name: "rounds floating point noise to 2 decimals", celsius: 17.2, fahrenheit: 62.96, kelvin: 290.35},
 	}
 
 	for _, tt := range tests {
@@ -24,8 +25,8 @@ func TestNewTemperatureShouldConvertCelsiusToAllScales(t *testing.T) {
 			temperature := NewTemperature(tt.celsius)
 
 			assert.Equal(t, tt.celsius, temperature.Celsius)
-			assert.InDelta(t, tt.fahrenheit, temperature.Fahrenheit, 0.001)
-			assert.InDelta(t, tt.kelvin, temperature.Kelvin, 0.001)
+			assert.Equal(t, tt.fahrenheit, temperature.Fahrenheit, 0.001)
+			assert.Equal(t, tt.kelvin, temperature.Kelvin, 0.001)
 		})
 	}
 }

@@ -6,8 +6,9 @@ Celsius, Fahrenheit e Kelvin.
 
 ## URL de produção (Cloud Run)
 
-> **TODO:** cole aqui a URL ativa após o deploy, ex.:
-> `https://cep-weather-api-939917444284.us-central1.run.app`
+A aplicação está publicada e ativa em:
+
+**https://cep-weather-api-939917444284.us-central1.run.app**
 
 Exemplo de requisição:
 

@@ -1,5 +1,7 @@
 package entity
 
+import "math"
+
 type Temperature struct {
 	Celsius    float64
 	Fahrenheit float64
@@ -8,8 +10,12 @@ type Temperature struct {
 
 func NewTemperature(celsius float64) *Temperature {
 	return &Temperature{
-		Celsius:    celsius,
-		Fahrenheit: celsius*1.8 + 32,
-		Kelvin:     celsius + 273.15,
+		Celsius:    round(celsius),
+		Fahrenheit: round(celsius*1.8 + 32),
+		Kelvin:     round(celsius + 273.15),
 	}
+}
+
+func round(value float64) float64 {
+	return math.Round(value*100) / 100
 }
